@@ -1,0 +1,7 @@
+rails generate scaffold Category name:string 
+
+rails generate scaffold Company name:string head_quarters:string statement:text url:string email:string description:text logo:string 
+
+rails generate scaffold Job title:string category:integer job_type:integer region:string apply_link:string description:text company:references highlight:boolean featured:boolean 
+
+rails generate scaffold Post job_title:string job_category:integer job_type:integer company_head_quarters:string job_region:string job_apply_link:string job_description:text company_name:string company_statement:string company_url:string company_email:string company_description:text company_logo:string highlight_job:boolean feature_job:boolean 

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">Our Logo</a>
+  <form class="form-inline">
+    <button class="btn btn-outline-primary" type="button">Main button</button>
+    <div style="padding-left: 10px;">
+      <button class="btn btn-outline-success" type="button">Second button</button>
+    </div>
+  </form>
+</nav>
+<h1>Jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Job type</th>
+      <th>Region</th>
+      <th>Apply link</th>
+      <th>Description</th>
+      <th>Company</th>
+      <th>Highlight</th>
+      <th>Featured</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.title %></td>
+        <td><%= job.category %></td>
+        <td><%= job.job_type %></td>
+        <td><%= job.region %></td>
+        <td><%= job.apply_link %></td>
+        <td><%= job.description %></td>
+        <td><%= job.company %></td>
+        <td><%= job.highlight %></td>
+        <td><%= job.featured %></td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '<button type="button">New Job</button>'.html_safe, new_job_path %>

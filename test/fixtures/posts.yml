@@ -1,0 +1,59 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id                    :integer          not null, primary key
+#  company_description   :text
+#  company_email         :string
+#  company_head_quarters :string
+#  company_logo          :string
+#  company_name          :string
+#  company_statement     :string
+#  company_url           :string
+#  feature_job           :boolean
+#  highlight_job         :boolean
+#  job_apply_link        :string
+#  job_category          :integer
+#  job_description       :text
+#  job_region            :string
+#  job_title             :string
+#  job_type              :integer
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_title: MyString
+  job_category: 1
+  job_type: 1
+  company_head_quarters: MyString
+  job_region: MyString
+  job_apply_link: MyString
+  job_description: MyText
+  company_name: MyString
+  company_statement: MyString
+  company_url: MyString
+  company_email: MyString
+  company_description: MyText
+  company_logo: MyString
+  highlight_job: false
+  feature_job: false
+
+two:
+  job_title: MyString
+  job_category: 1
+  job_type: 1
+  company_head_quarters: MyString
+  job_region: MyString
+  job_apply_link: MyString
+  job_description: MyText
+  company_name: MyString
+  company_statement: MyString
+  company_url: MyString
+  company_email: MyString
+  company_description: MyText
+  company_logo: MyString
+  highlight_job: false
+  feature_job: false

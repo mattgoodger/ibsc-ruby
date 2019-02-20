@@ -1,0 +1,134 @@
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+body {
+    margin: 0%;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+a { 
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+ }
+
+.container {
+    background-image: url('https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    line-height: 1.4;
+    margin: 0;
+}
+
+.landingpage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    text-align: center;
+    line-height: 80px;
+}
+
+.ibsclogo {
+    display: grid;
+    z-index: 1;
+
+    top: 0px;
+    right: 0px;
+    width: 200px;
+    height: 74px;
+    position: fixed;
+    justify-self: center;
+    margin: 16px;
+}
+
+
+.left-container {
+    display: grid;
+    justify-content: center;
+}
+
+.left-container:hover {
+    background-color: rgba(119, 119, 119, 0.2);
+    transition: 2s;
+}
+
+.right-container {
+    display: grid;
+    justify-content: center;
+}
+
+.right-container:hover {
+    background-color: rgba(119, 119, 119, 0.2);
+    transition: 2s;
+}
+
+.btnHomePage {
+    display: grid;
+    position: relative;
+    text-align: center;
+    width: 224px;
+    height: 80px;
+    align-self: center;
+    background: rgba(100, 180, 246, .5);
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 16px 16px;
+    font-size: 32px;
+    margin: 0, auto;
+    transition: 0.2s;
+    z-index: 99;
+  }
+
+  .btnHomePage:hover {
+      transform: scale(1.15);
+      background: rgba(100, 180, 246, .8);
+  }
+
+  @media only screen and (max-width: 768px) {
+   .landingpage {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 100vh;
+    }
+    .left-container {
+        display: grid;
+        justify-content: center;
+    
+    }
+    
+    .right-container {
+        display: grid;
+        justify-content: center;
+        border: 1px solid red;
+    }
+    
+    .btn {
+        display: grid;
+        position: relative;
+        width: 224px;
+        height: 80px;
+        align-self: center;
+        background: rgba(100, 180, 246, .6);
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+        padding: 16px 24px;
+        font-size: 32px;
+        transition: 0.2s;
+        z-index: 99;
+        
+      }
+  }

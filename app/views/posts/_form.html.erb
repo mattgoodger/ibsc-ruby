@@ -1,0 +1,92 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :job_title %>
+    <%= form.text_field :job_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_category %>
+	<%= form.select :job_category, Category.all.map{|c| [c.name,c.id]}, prompt: "Please choose category" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_type %>
+    <%= form.number_field :job_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_head_quarters %>
+    <%= form.text_field :company_head_quarters %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_region %>
+    <%= form.text_field :job_region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_apply_link %>
+    <%= form.text_field :job_apply_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_description %>
+    <%= form.text_area :job_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_name %>
+    <%= form.text_field :company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_statement %>
+    <%= form.text_field :company_statement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_url %>
+    <%= form.text_field :company_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_email %>
+    <%= form.text_field :company_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_description %>
+    <%= form.text_area :company_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_logo %>
+    <%= form.text_field :company_logo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :highlight_job %>
+    <%= form.check_box :highlight_job %>
+  </div>
+
+  <div class="field">
+    <%= form.label :feature_job %>
+    <%= form.check_box :feature_job %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

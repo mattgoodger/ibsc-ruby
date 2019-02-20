@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: companies
+#
+#  id            :integer          not null, primary key
+#  description   :text
+#  email         :string
+#  head_quarters :string
+#  logo          :string
+#  name          :string
+#  statement     :text
+#  url           :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  head_quarters: MyString
+  statement: MyText
+  url: MyString
+  email: MyString
+  description: MyText
+  logo: MyString
+
+two:
+  name: MyString
+  head_quarters: MyString
+  statement: MyText
+  url: MyString
+  email: MyString
+  description: MyText
+  logo: MyString

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job title</th>
+      <th>Job category</th>
+      <th>Job type</th>
+      <th>Company head quarters</th>
+      <th>Job region</th>
+      <th>Job apply link</th>
+      <th>Job description</th>
+      <th>Company name</th>
+      <th>Company statement</th>
+      <th>Company url</th>
+      <th>Company email</th>
+      <th>Company description</th>
+      <th>Company logo</th>
+      <th>Highlight job</th>
+      <th>Feature job</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.job_title %></td>
+        <td><%= post.job_category %></td>
+        <td><%= post.job_type %></td>
+        <td><%= post.company_head_quarters %></td>
+        <td><%= post.job_region %></td>
+        <td><%= post.job_apply_link %></td>
+        <td><%= post.job_description %></td>
+        <td><%= post.company_name %></td>
+        <td><%= post.company_statement %></td>
+        <td><%= post.company_url %></td>
+        <td><%= post.company_email %></td>
+        <td><%= post.company_description %></td>
+        <td><%= post.company_logo %></td>
+        <td><%= post.highlight_job %></td>
+        <td><%= post.feature_job %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>

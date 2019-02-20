@@ -1,0 +1,45 @@
+# == Schema Information
+#
+# Table name: jobs
+#
+#  id          :integer          not null, primary key
+#  apply_link  :string
+#  category    :integer
+#  description :text
+#  featured    :boolean
+#  highlight   :boolean
+#  job_type    :integer
+#  region      :string
+#  title       :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  company_id  :integer
+#
+# Indexes
+#
+#  index_jobs_on_company_id  (company_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  category: 1
+  job_type: 1
+  region: MyString
+  apply_link: MyString
+  description: MyText
+  company: one
+  highlight: false
+  featured: false
+
+two:
+  title: MyString
+  category: 1
+  job_type: 1
+  region: MyString
+  apply_link: MyString
+  description: MyText
+  company: two
+  highlight: false
+  featured: false
